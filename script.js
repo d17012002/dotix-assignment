@@ -30,6 +30,7 @@ async function checkWeather(city, unit) {
 
     console.log("run");
     unitSelectBox.style.display = "block";
+    
 
     location_not_found.style.display = "none";
     weather_body.style.display = "flex";
@@ -77,6 +78,7 @@ const getUserCoordinates = () => {
 }
 
 searchBtn.addEventListener('click', () => {
+    geoLocationBox.innerHTML = ``;
     checkWeather(inputBox.value, unitSelect.value);
 });
 
